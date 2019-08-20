@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navigation from "./components/Navigation";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 
 function App() {
   return (
