@@ -1,14 +1,9 @@
 import React, { Component } from "react";
-// import Posts from "../posts";
+import Posts from "../posts";
 
 class Home extends Component {
   render() {
-    return(
-      <div>
-        Home
-      </div>
-    );
-    // return <Posts />;
+    return <Posts />;
   }
 }
 
