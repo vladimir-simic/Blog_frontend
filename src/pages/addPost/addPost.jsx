@@ -26,26 +26,24 @@ class AddPost extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <div className='form-group'>
+      <form onSubmit={this.onSubmit} className="add_post_form">
+        <div>
           <label htmlFor=''>Title</label>
           <input
             name='text'
             type='text'
-            className='form-control'
             onChange={this.onChange}
           />
         </div>
-        <div className='form-group'>
+        <div>
           <label htmlFor=''>Photo</label>
           <input
             name='media'
             type='file'
-            className='form-control'
             ref={this.fileInput}
           />
         </div>
-        <button type='submit' className='btn btn-secondary float-right'>
+        <button type='submit' className='btn'>
           Add
         </button>
       </form>

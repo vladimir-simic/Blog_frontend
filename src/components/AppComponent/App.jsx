@@ -5,33 +5,40 @@ import Home from "../../pages/home";
 import User from "../../pages/user";
 import Registration from "../../pages/registration";
 import Login from "../../pages/login";
-import NotificationSystem from "../notification.component";
+// import NotificationSystem from "../notification.component";
 import Navigation from "../navigation";
-import PrivateRoute from "../PrivateRoute";
+// import PrivateRoute from "../PrivateRoute";
 import Post from "../../pages/post";
 import AddPost from "../../pages/addPost";
-import Image from "../../components/Image/image";
+import Photography from "../../pages/photography";
 
 const App = ({ user, logout }) => {
   return (
     <Fragment>
       <Router>
         <Navigation user={user} logout={logout} />
-        <Image />
         <Switch>
           <Route path='/register' component={Registration} />
           <Route path='/login' component={Login} />
 
-          <PrivateRoute path='/' component={Home} exact />
-          <PrivateRoute path='/users/self' component={User} />
+          <Route path='/' component={Home} exact />
+          <Route path='/users/self' component={User} />
+          <Route path='/posts/:postId' component={Post} />
+          <Route path='/addPost' component={AddPost} />
+          <Route path='/photography' component={Photography} />
+          <Route path='/about/' component={() => {}} />
+          <Route path='/users/' component={() => {}} />
 
+          {/* <PrivateRoute path='/' component={Home} exact />
+          <PrivateRoute path='/users/self' component={User} />
           <PrivateRoute path='/posts/:postId' component={Post} />
           <PrivateRoute path='/addPost' component={AddPost} />
+          <PrivateRoute path='/photography' component={Photography} />
           <PrivateRoute path='/about/' component={() => {}} />
-          <PrivateRoute path='/users/' component={() => {}} />
+          <PrivateRoute path='/users/' component={() => {}} /> */}
         </Switch>
       </Router>
-      <NotificationSystem />
+      {/* <NotificationSystem /> */}
     </Fragment>
   );
 };

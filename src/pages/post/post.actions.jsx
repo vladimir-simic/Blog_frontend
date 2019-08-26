@@ -1,15 +1,11 @@
 import axios from "axios";
 
-const getPostList = ({ token }, postId) => dispatch => {
+const getPostList = (postId) => dispatch => {
   axios
-    .get(`/api/v1/media/${postId}/`, {
-      headers: {
-        authorization: `Bearer ${token}`
-      }
-    })
+    .get(`/posts/${postId}`)
     .then(response => {
       if (response && response.status === 200) {
-        const { payload } = response.data;
+        const payload = response.data[0];
         dispatch({
           type: "GET_MEDIA",
           payload

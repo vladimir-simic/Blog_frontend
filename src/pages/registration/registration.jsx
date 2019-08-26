@@ -38,23 +38,19 @@ class Registration extends Component {
           className='form'
         >
           <div class="input"> 
-            {/* <label htmlFor=''>Username</label> */}
             <input
               type='text'
               name='username'
-              // className='form-control'
               onChange={this.onChange}
             />
             <span class="highlight"></span>
             <span class="bar"></span>
             <label htmlFor='' id="mla">Username</label>
           </div>
-          <div class="input"> 
-            {/* <label htmlFor=''>Email</label> */}
+          <div class="input">
             <input
               type='email'
               name='email'
-              // className='form-control'
               onChange={this.onChange}
             />
             <span class="highlight"></span>
@@ -62,11 +58,9 @@ class Registration extends Component {
             <label htmlFor='' id="mla">Email</label>
           </div>
           <div class="input"> 
-            {/* <label htmlFor=''>Password</label> */}
             <input
               type='password'
               name='rehashedPassword'
-              // className='form-control'
               onChange={this.onChange}
             />
             <span class="highlight"></span>

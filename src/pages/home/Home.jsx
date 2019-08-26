@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import Posts from "../posts";
+import Image from "../../components/Image/image";
 
 class Home extends Component {
   render() {
-    return <Posts />;
+    return (
+      <div>
+        <Image />
+        <Posts />
+      </div>
+    );
   }
 }
 

@@ -1,30 +1,33 @@
 import React, { Component } from "react";
+import airplaneClouds from "./airplane-clouds.jpg";
 
-// const Image = () => {
-//     return (
-//         <div>
-//             <img src="./airplane-clouds.jpg" alt="Airplane clouds" className="main-image"/>
-//         </div>
-//     );
-// };
+class Image extends Component {
+  render() {
+    return (
+      <div>
+        <img src={airplaneClouds} alt="Airplane clouds" className="main-image"/>
+      </div>
+    );
+  }
+}
+
+export default Image;
 
 
   
-  class Image extends Component {
-    render() {
-      return (
-        <section style={ sectionStyle }>
-        </section>
-      );
-    }
-  }
+  // class Image extends Component {
+  //   render() {
+  //     return (
+  //       <section style={ sectionStyle }>
+  //       </section>
+  //     );
+  //   }
+  // }
 
-  var sectionStyle = {
-    width: "100%",
-    height: "30%",
-    backgroundImage: `url(${Image})`
-  };
-
-export default Image;
+  // var sectionStyle = {
+  //   width: "100%",
+  //   height: "30%",
+  //   backgroundImage: `url(${Image})`
+  // };
 
 

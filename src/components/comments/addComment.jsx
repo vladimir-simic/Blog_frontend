@@ -3,12 +3,12 @@ import React from "react";
 const AddComment = props => {
   const { onSubmit, onChange } = props;
   return (
-    <form onSubmit={onSubmit}>
-      <div className='form-group'>
+    <form onSubmit={onSubmit} className="add_comment_form">
+      <div>
         <label htmlFor=''>Leave comment</label>
-        <textarea name='text' onChange={onChange} className='form-control' />
+        <textarea name='text' onChange={onChange} className='add_comment_area' />
       </div>
-      <button type='submit' className='btn btn-success float-right'>
+      <button type='submit' className='btn'>
         Add Comment
       </button>
     </form>

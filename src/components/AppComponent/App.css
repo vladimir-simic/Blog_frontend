@@ -259,14 +259,39 @@ input:focus ~ .highlight
     color: black;
 }
 
-/* .registration-input-email{
+/*----------------------------------------
 
+                POSTS
+
+------------------------------------------*/
+.posts{
+  position: relative;
+  left: 50%;
+  top: 5rem;
 }
 
-.registration-input-pass{
-    
+.posts ul{
+  list-style-type: none;
 }
 
-.registration-input-email{
-    
-} */
+.add_comment_form{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15rem;
+}
+
+.add_comment_area{
+  width: 30rem;
+  height: 10rem;
+}
+
+/*----------------------------------------
+
+              PHOTOGRAPHY
+
+------------------------------------------*/
+
+.photography{
+  height: 1rem;
+}
