@@ -4,7 +4,7 @@ import "./addPost.css";
 
 class AddPost extends Component {
   state = {
-    text: "",
+    title: "",
     media: ""
   };
 
@@ -12,18 +12,23 @@ class AddPost extends Component {
 
   onChange = event => {
     const { name, value } = event.target;
+    // console.log([name, value]);
     this.setState({ [name]: value });
+    // console.log(this.state)
   };
 
   onSubmit = event => {
     event.preventDefault();
     const media = this.fileInput.current.files[0];
+    
     if (!media) {
       console.log("Media is required");
       return;
     }
-    const { text } = this.state;
-    this.props.addPost(this.props.user, { text, media });
+    const { title } = this.state;
+    
+    // console.log(this.state)
+    this.props.addPost({ title, media });
   };
 
   render() {
@@ -35,13 +40,14 @@ class AddPost extends Component {
             <label htmlFor='title'>Title</label>
             <input
               name='title'
+              id='title'
               type='text'
               onChange={this.onChange}
             />
           </div>
           <div className="media">
             <input
-              name='mediaz'
+              name='media'
               type='file'
               ref={this.fileInput}
             />

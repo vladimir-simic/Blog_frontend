@@ -16,7 +16,7 @@ class Posts extends Component {
          {posts.map((post) => (
           <li>
             <Link style={{textDecoration: 'none'}} 
-                  to={`/posts/${post.id}`}><strong>{console.log(post.title)}</strong> --- Author: {post.author}
+                  to={`/posts/${post.id}`}><strong>{post.title}</strong> --- Author: {post.author}
             </Link> ({formatDate(post.created_at)})
             
           </li>

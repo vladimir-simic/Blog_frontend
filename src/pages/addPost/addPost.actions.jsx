@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const addPost = ( { media, text }) => async dispatch => {
+const addPost = ( { title, text }) => async dispatch => {
   const formData = new FormData();
-  formData.append("media", media);
+  formData.append("title", title);
+  console.log([title]);
 
   const contentId = await axios
     .post("/posts", formData 
