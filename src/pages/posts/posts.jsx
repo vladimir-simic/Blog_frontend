@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { formatDate } from "../../util/date"
+import { formatDate } from "../../util/date";
+import "./posts.css";
 
 class Posts extends Component {
   componentDidMount() {
@@ -14,7 +15,10 @@ class Posts extends Component {
         <ul>
          {posts.map((post) => (
           <li>
-            <Link to={`/posts/${post.id}`}>{post.title}</Link> ({formatDate(post.created_at)})
+            <Link style={{textDecoration: 'none'}} 
+                  to={`/posts/${post.id}`}><strong>{console.log(post.title)}</strong> --- Author: {post.author}
+            </Link> ({formatDate(post.created_at)})
+            
           </li>
          ))}
         </ul>

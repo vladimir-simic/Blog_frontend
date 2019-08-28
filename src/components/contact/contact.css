@@ -1,0 +1,25 @@
+.contact{
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%);
+    top: 19rem;
+}
+
+.name{
+    text-align: right;
+    font-size: 80px;
+    font-family: "Chonburi";
+    color: #001a33;
+    position: absolute;
+    right: -37rem;
+    top: 8rem;
+}
+
+.email{
+    position: absolute;
+    top: 20rem;
+    right: -37rem;
+    font-size: 32px;
+    font-family: 'Karla', sans-serif;
+    color: #001a33;
+}

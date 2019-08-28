@@ -1,6 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Comments from "../../components/comments";
-// import Spinner from "../../components/Spinner";
+import { formatDate } from "../../util/date";
+import Logo from "../../components/logo/logo";
 import "./post.css";
 
 class Post extends Component {
@@ -13,14 +14,18 @@ class Post extends Component {
     const { post } = this.props;
     
     return (
-      <div className="myblog-post">
-        <div>
-          <h3>{post.title}</h3>
-          <p>{post.content}</p>
-          {/* <img src={this.props.post.media.path} alt='' className='w-25' /> */}
+      <div>
+        <Logo />
+        <div className="blog-post">
+          <div>
+            <h3 className="title">{post.title}</h3>
+            <p className="content">{post.content}</p>
+            <h4 className="author-date"><em>{post.author}, {formatDate(post.created_at)}</em></h4>
+          </div>
+          <Comments contentId={postId} />
         </div>
-        <Comments contentId={postId} />
       </div>
+      
       // <Fragment>
       
       //   <h3>Post 1</h3>

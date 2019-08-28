@@ -1,0 +1,21 @@
+.add_post_form{
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
+}
+
+.addPost-title{
+    position: absolute;
+    top: -11rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.media{
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}

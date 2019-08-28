@@ -1,0 +1,9 @@
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4rem;
+    font-size: 100px;
+    font-family: "Chonburi";
+    color: #001a33;
+}

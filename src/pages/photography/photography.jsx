@@ -1,12 +1,18 @@
 import React, { Component } from "react";
+import Photos from "./photos";
+import Logo from "../../components/logo/logo";
+import "./photography.css";
 
 class Photography extends Component {
   render() {
     return (
       <div>
-        Photo
-        <img src="../components/Image/image" alt="" className="photography"/>
+        <Logo />
+        <div className="photography">
+          <Photos />
+        </div>
       </div>
+      
     );
   }
 }

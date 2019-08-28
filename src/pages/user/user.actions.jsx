@@ -2,7 +2,7 @@ import axios from "axios";
 
 const getSelfInfo = ({ token }) => dispatch => {
   axios
-    .get("/api/v1/users/self", {
+    .get("users/self", {
       headers: {
         authorization: `Bearer ${token}`
       }

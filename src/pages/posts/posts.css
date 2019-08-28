@@ -1,0 +1,32 @@
+/*----------------------------------------
+
+                POSTS
+
+------------------------------------------*/
+.posts{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 53rem;
+  }
+  
+.posts ul{
+  list-style-type: none;
+  margin: 2rem;
+}
+
+.posts ul li{
+  margin: 1rem 0;
+  font-size: 20px;
+  border-radius: .5rem;
+  padding: 1rem;
+  width: 50rem;
+  text-align: center;
+  box-shadow: 4px 3px 16px -5px rgba(0,0,0,0.75);
+  transition: 0.3s;
+}
+
+.posts ul li:hover{
+  background: lightgray;
+  transform: scale(1.03);
+}

@@ -1,0 +1,36 @@
+/*----------------------------------------
+
+              PHOTOGRAPHY
+
+------------------------------------------*/
+
+.main-image{
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  z-index: -10;
+  top: -3rem;
+}
+
+.photography{
+    width: 100%;
+    position: absolute;
+    top: 16rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+.cat, .flower, .conceptual, .shadows{
+  width: 30%;
+  margin: 1rem 1rem;
+}
+
+.images{
+  width: 20%;
+  margin: 1rem 1rem;
+}
+
+.borders, .venice, .riga{
+  width: 50%;
+  margin: 1rem 1rem;
+}

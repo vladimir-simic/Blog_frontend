@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { formatDate } from "../../util/date";
 import AddComment from "./addComment";
 
 class Comments extends Component {
@@ -24,13 +25,13 @@ class Comments extends Component {
   render() {
     return (
       <div>
-        <ul className='list-unstyled'>
+        <ul>
           {this.props.comments.map(item => {
-            const dateObj = new Date(item.createdAt);
+            const dateObj = new Date(item.created_at);
             const date = `${dateObj.getDay()}/${dateObj.getMonth()}/${dateObj.getFullYear()} ${dateObj.getHours()}:${dateObj.getMinutes()}`;
             return (
-              <li key={item._id} className='border border-info p-2 mb-2'>
-                {item.username} {date} : {item.message}
+              <li key={item._id}>
+                {item.author} {date} : {item.message}
               </li>
             );
           })}

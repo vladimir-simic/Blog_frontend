@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Logo from "../../components/logo/logo";
+import "./addPost.css";
 
 class AddPost extends Component {
   state = {
@@ -26,27 +28,30 @@ class AddPost extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit} className="add_post_form">
-        <div>
-          <label htmlFor=''>Title</label>
-          <input
-            name='text'
-            type='text'
-            onChange={this.onChange}
-          />
-        </div>
-        <div>
-          <label htmlFor=''>Photo</label>
-          <input
-            name='media'
-            type='file'
-            ref={this.fileInput}
-          />
-        </div>
-        <button type='submit' className='btn'>
-          Add
-        </button>
-      </form>
+      <div>
+        <Logo />
+        <form onSubmit={this.onSubmit} className="add_post_form">
+          <div className="addPost-title">
+            <label htmlFor='title'>Title</label>
+            <input
+              name='title'
+              type='text'
+              onChange={this.onChange}
+            />
+          </div>
+          <div className="media">
+            <input
+              name='mediaz'
+              type='file'
+              ref={this.fileInput}
+            />
+          </div>
+          <button type='submit' className='btn'>
+            Add
+          </button>
+        </form>
+      </div>
+      
     );
   }
 }

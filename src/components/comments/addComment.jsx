@@ -1,4 +1,5 @@
 import React from "react";
+import "./addComment.css";
 
 const AddComment = props => {
   const { onSubmit, onChange } = props;

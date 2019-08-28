@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+import Logo from "../../components/logo/logo";
+import Photo from "../../components/Image/image";
 
 class Registration extends Component {
   state = {
@@ -32,46 +34,51 @@ class Registration extends Component {
     }
 
     return (
-      <div className="block">
-        <form
-          onSubmit={this.onSubmit}
-          className='form'
-        >
-          <div class="input"> 
-            <input
-              type='text'
-              name='username'
-              onChange={this.onChange}
-            />
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label htmlFor='' id="mla">Username</label>
-          </div>
-          <div class="input">
-            <input
-              type='email'
-              name='email'
-              onChange={this.onChange}
-            />
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label htmlFor='' id="mla">Email</label>
-          </div>
-          <div class="input"> 
-            <input
-              type='password'
-              name='rehashedPassword'
-              onChange={this.onChange}
-            />
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label htmlFor='' id="mla">Password</label>
-          </div>
-          <button type='submit' className='btn'>
-            Register
-          </button>
-        </form>
+      <div>
+        <Logo />
+        <Photo />
+        <div className="block">
+          <form
+            onSubmit={this.onSubmit}
+            className='form'
+          >
+            <div class="input"> 
+              <input
+                type='text'
+                name='username'
+                onChange={this.onChange}
+              />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label htmlFor='' id="username">Username</label>
+            </div>
+            <div class="input">
+              <input
+                type='email'
+                name='email'
+                onChange={this.onChange}
+              />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label htmlFor='' id="email">Email</label>
+            </div>
+            <div class="input"> 
+              <input
+                type='password'
+                name='rehashedPassword'
+                onChange={this.onChange}
+              />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label htmlFor='' id="password">Password</label>
+            </div>
+            <button type='submit' className='btn'>
+              Register
+            </button>
+          </form>
+        </div>
       </div>
+      
     );
   }
 }

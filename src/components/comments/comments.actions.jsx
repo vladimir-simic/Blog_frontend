@@ -1,12 +1,14 @@
 import axios from "axios";
 
-const getCommentsByContentId = ({ token }, contentId) => dispatch => {
+const getCommentsByContentId = (contentId) => dispatch => {
   axios
-    .get(`/api/v1/media/${contentId}/comments/`, {
-      headers: {
-        authorization: `Bearer ${token}`
-      }
-    })
+    .get(`/posts/${contentId}/comments/` 
+    // {
+    //   headers: {
+    //     authorization: `Bearer ${token}`
+    //   }
+    // }
+    )
     .then(response => {
       if (response && response.status === 200) {
         const { payload } = response.data;
@@ -18,13 +20,15 @@ const getCommentsByContentId = ({ token }, contentId) => dispatch => {
     });
 };
 
-const addComment = ({ token }, contentId, text) => dispatch => {
+const addComment = (contentId, text) => dispatch => {
   axios
-    .post(`/api/v1/media/${contentId}/comments/`, text, {
-      headers: {
-        authorization: `Bearer ${token}`
-      }
-    })
+    .post(`/posts/${contentId}/comments/`, text
+    // {
+    //   headers: {
+    //     authorization: `Bearer ${token}`
+    //   }
+    // }
+    )
     .then(response => {
       if (response && response.status === 201) {
         dispatch({

@@ -1,0 +1,10 @@
+.add_comment_form{
+    position: absolute;
+    left: -100%;
+    top: 5rem;
+}
+
+.add_comment_area{
+  width: 35rem;
+  height: 10rem;
+}

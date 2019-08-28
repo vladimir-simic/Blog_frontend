@@ -4,7 +4,7 @@ import User from "./user";
 
 const stateToProps = state => ({
   user: state.user,
-  userInfo: state.userInfo
+  // userInfo: state.userInfo
 });
 
 export default connect(

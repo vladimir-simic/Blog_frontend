@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./navigation.css";
 
 const Navigation = ({ user, logout }) => {
   return (
@@ -33,7 +34,7 @@ const Navigation = ({ user, logout }) => {
           <button onClick={logout} className='btn btn-warning'>
             Log OUT!!!!
           </button>
-        ) : null}
+        ) : null} 
       </nav>
       <nav className="navbar-main">
         <ul className="navbar-nav-main">
@@ -44,22 +45,17 @@ const Navigation = ({ user, logout }) => {
           </li>
           <li className="nav-item-main">
             <Link to="/design" className="link-main">
-              Design
+            Graphic Design
             </Link>
           </li>
           <li className="nav-item-main">
-            <Link to="/graphic" className="link-main">
-              Graphic
+            <Link to="/addPost" className="link-main">
+              Add Post
             </Link>
           </li>
           <li className="nav-item-main">
-            <Link to="/stories" className="link-main">
-              Stories
-            </Link>
-          </li>
-          <li className="nav-item-main">
-            <Link to="/contact" className="link-main">
-              Contact
+            <Link to="/team" className="link-main">
+              Team
             </Link>
           </li>
         </ul>

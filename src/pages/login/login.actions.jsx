@@ -3,7 +3,7 @@ import { success, error } from "react-notification-system-redux";
 
 const loginUser = user => dispatch => {
   axios
-    .post("/api/v1/auth/session", user)
+    .post("/users/session", user)
     .then(response => {
       if (response && response.status === 200) {
         const { token } = response.data.payload;
