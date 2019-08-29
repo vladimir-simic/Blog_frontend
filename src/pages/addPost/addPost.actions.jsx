@@ -1,15 +1,16 @@
 import axios from "axios";
 
-const addPost = ( { title, text }) => async dispatch => {
-  const formData = new FormData();
-  formData.append("title", title);
-  console.log([title]);
+const addPost = ( { title, content, author }) => async dispatch => {
+  // const formData = new FormData();
+  // formData.append("title", title);
+  console.log([title, content, author]);
 
   const contentId = await axios
-    .post("/posts", formData 
+    .post("/posts", 
+    // formData, 
     // {
     //   headers: {
-    //     authorization: `Bearer ${token}`,
+    //     // authorization: `Bearer ${token}`,
     //     "Content-Type": "multipart/form-data"
     //   }
     // }
@@ -25,7 +26,9 @@ const addPost = ( { title, text }) => async dispatch => {
       `/posts`,
       {
         contentId,
-        caption: text
+        title,
+        content,
+        author
       }
       // {
       //   headers: {

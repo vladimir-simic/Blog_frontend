@@ -13,14 +13,19 @@ class Photos extends Component {
         // const { posts } = this.props;
       return (
         <div>
-          <img src={cat} alt="Cat" className="cat"/>
-          <img src={borders} alt="borders" className="borders"/>
-          <img src={conceptual} alt="conceptual" className="conceptual"/>
-          <img src={flower} alt="flower" className="flower"/>
-          <img src={images} alt="images" className="images"/>
-          <img src={riga} alt="riga" className="riga"/>
-          <img src={shadows} alt="shadows" className="shadows"/>
-          <img src={venice} alt="venice" className="venice"/>
+          <h1 className="photography-heading">Digital Art</h1>
+          <div class="row"> 
+            <div class="column">
+              <img src={cat} alt="Cat" className="cat"/>
+              <img src={borders} alt="borders" className="borders"/>
+              <img src={conceptual} alt="conceptual" className="conceptual"/>
+              <img src={flower} alt="flower" className="flower"/>
+              <img src={images} alt="images" className="images"/>
+              <img src={riga} alt="riga" className="riga"/>
+              <img src={venice} alt="venice" className="venice"/>
+              <img src={shadows} alt="shadows" className="shadows"/>
+            </div>
+          </div>
         </div>
       );
     }

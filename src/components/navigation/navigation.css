@@ -8,7 +8,8 @@
     background-color: black;
     width: 100%;
     height: 3rem;
-    position: relative;
+    position: fixed;
+    z-index: 20;
 }
 
 .navbar-nav{
@@ -44,7 +45,7 @@
     width: 100%;
     height: 3rem;
     position: relative;
-    top: 10rem;
+    top: 13rem;
     margin: 0 auto;
 }
 
@@ -69,10 +70,33 @@
     margin: 1rem;
     font-size: 16px;
     letter-spacing: 2px;
-    transition: .5s;
+    transition: .3s;
   }
 
 .link-main:hover{
-    border-bottom: 1.5px solid red;
+    border-bottom: 1.5px solid #0c0091;
     padding: 10px 0;
+}
+
+.fa-facebook{
+    position: fixed;
+    top: 0.8rem;
+    color: white;
+    z-index: 30;
+    right: 3rem;
+    font-size: 21px;
+}
+
+.fa-twitter{
+    position: fixed;
+    top: 0.8rem;
+    color: white;
+    z-index: 30;
+    right: 6rem;
+    font-size: 21px;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover{
+    color: lightgray;
 }

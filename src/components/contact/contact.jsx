@@ -6,8 +6,8 @@ class Contact extends Component {
         // const { authors = [] } = this.props;
         return (
             <div className="contact">
-                <div className="name">Find out the V.log team</div>
-                <p className="email">vlog@vlog.com</p>
+                <div className="contact-name">Find out the V.log team</div>
+                <p className="contact-email">vlog@vlog.com</p>
             </div>
         );
     }

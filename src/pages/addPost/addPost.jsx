@@ -5,10 +5,11 @@ import "./addPost.css";
 class AddPost extends Component {
   state = {
     title: "",
-    media: ""
+    content: ""
+    // media: ""
   };
 
-  fileInput = React.createRef();
+  // fileInput = React.createRef();
 
   onChange = event => {
     const { name, value } = event.target;
@@ -19,16 +20,16 @@ class AddPost extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    const media = this.fileInput.current.files[0];
+    // const media = this.fileInput.current.files[0];
     
-    if (!media) {
-      console.log("Media is required");
-      return;
-    }
-    const { title } = this.state;
+    // if (!media) {
+    //   console.log("Media is required");
+    //   return;
+    // }
+    const { title, content, author } = this.state;
     
-    // console.log(this.state)
-    this.props.addPost({ title, media });
+    console.log(this.state)
+    this.props.addPost({ title, content, author });
   };
 
   render() {
@@ -37,21 +38,42 @@ class AddPost extends Component {
         <Logo />
         <form onSubmit={this.onSubmit} className="add_post_form">
           <div className="addPost-title">
-            <label htmlFor='title'>Title</label>
+            {/* <label htmlFor='title'>Title</label> */}
             <input
               name='title'
               id='title'
-              type='text'
+              type='title'
+              placeholder='Title'
               onChange={this.onChange}
             />
           </div>
-          <div className="media">
+          <div className="addPost-content">
+            {/* <label htmlFor='content'>Content</label> */}
+            <textarea
+              name='content'
+              id='content'
+              type='content'
+              placeholder='Content'
+              onChange={this.onChange}
+            />
+          </div>
+          <div className="addPost-author">
+            {/* <label htmlFor='content'>Author</label> */}
+            <input
+              name='author'
+              id='author'
+              type='author'
+              placeholder='Author'
+              onChange={this.onChange}
+            />
+          </div>
+          {/* <div className="media">
             <input
               name='media'
               type='file'
               ref={this.fileInput}
             />
-          </div>
+          </div> */}
           <button type='submit' className='btn'>
             Add
           </button>

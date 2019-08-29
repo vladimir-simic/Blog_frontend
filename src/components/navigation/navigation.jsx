@@ -37,6 +37,8 @@ const Navigation = ({ user, logout }) => {
         ) : null} 
       </nav>
       <nav className="navbar-main">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
         <ul className="navbar-nav-main">
           <li className="nav-item-main">
             <Link to="/photography" className="link-main">

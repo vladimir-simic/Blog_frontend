@@ -4,7 +4,9 @@ import AddComment from "./addComment";
 
 class Comments extends Component {
   componentDidMount() {
-    this.props.getCommentsByContentId(this.props.user, this.props.contentId);
+    this.props.getCommentsByContentId(
+      // this.props.user, 
+      this.props.contentId);
   }
 
   onChange = event => {
@@ -19,7 +21,10 @@ class Comments extends Component {
       return;
     }
 
-    this.props.addComment(this.props.user, this.props.contentId, this.state);
+    this.props.addComment(
+      // this.props.user, 
+      this.props.contentId, this.state);
+      console.log(this.props)
   };
 
   render() {

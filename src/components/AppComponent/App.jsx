@@ -8,10 +8,13 @@ import Registration from "../../pages/registration";
 import Login from "../../pages/login";
 // import NotificationSystem from "../notification.component";
 import Navigation from "../navigation/navigation";
-import PrivateRoute from "../PrivateRoute";
+// import PrivateRoute from "../PrivateRoute";
 import Post from "../../pages/post";
 import AddPost from "../../pages/addPost";
 import Photography from "../../pages/photography";
+import Team from "../../pages/team/team";
+import Comments from "../../components/comments/addComment";
+import Design from "../../pages/design/design";
 
 const App = ({ user, logout }) => {
   return (
@@ -27,6 +30,9 @@ const App = ({ user, logout }) => {
           <Route path='/posts/:postId' component={Post} />
           <Route path='/addPost' component={AddPost} />
           <Route path='/photography' component={Photography} />
+          <Route path='/team' component={Team} />
+          <Route path='/posts/:contentId/comments' component={Comments} />
+          <Route path='/design' component={Design} />
           <Route path='/users/' component={() => {}} />
 
           {/* <PrivateRoute path='/' component={Home} exact />
