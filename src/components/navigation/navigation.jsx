@@ -37,17 +37,12 @@ const Navigation = ({ user, logout }) => {
         ) : null} 
       </nav>
       <nav className="navbar-main">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-twitter"></i>
+      <i className="fab fa-facebook"></i>
+      <i className="fab fa-twitter"></i>
         <ul className="navbar-nav-main">
           <li className="nav-item-main">
             <Link to="/photography" className="link-main">
               Photography
-            </Link>
-          </li>
-          <li className="nav-item-main">
-            <Link to="/design" className="link-main">
-            Graphic Design
             </Link>
           </li>
           <li className="nav-item-main">

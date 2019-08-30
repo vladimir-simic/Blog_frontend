@@ -14,20 +14,6 @@ class Image extends Component {
 export default Image;
 
 
-  
-  // class Image extends Component {
-  //   render() {
-  //     return (
-  //       <section style={ sectionStyle }>
-  //       </section>
-  //     );
-  //   }
-  // }
 
-  // var sectionStyle = {
-  //   width: "100%",
-  //   height: "30%",
-  //   backgroundImage: `url(${Image})`
-  // };
 
 

@@ -1,20 +1,16 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "../../pages/home";
 import User from "../../pages/user";
 import Registration from "../../pages/registration";
 import Login from "../../pages/login";
-// import NotificationSystem from "../notification.component";
 import Navigation from "../navigation/navigation";
-// import PrivateRoute from "../PrivateRoute";
 import Post from "../../pages/post";
 import AddPost from "../../pages/addPost";
 import Photography from "../../pages/photography";
 import Team from "../../pages/team/team";
-import Comments from "../../components/comments/addComment";
-import Design from "../../pages/design/design";
+import AddComment from "../../components/comments/addComment";
 
 const App = ({ user, logout }) => {
   return (
@@ -31,19 +27,10 @@ const App = ({ user, logout }) => {
           <Route path='/addPost' component={AddPost} />
           <Route path='/photography' component={Photography} />
           <Route path='/team' component={Team} />
-          <Route path='/posts/:contentId/comments' component={Comments} />
-          <Route path='/design' component={Design} />
+          <Route path='/posts/:commentId/comments' component={AddComment} />
           <Route path='/users/' component={() => {}} />
-
-          {/* <PrivateRoute path='/' component={Home} exact />
-          <PrivateRoute path='/users/self' component={User} />
-          <PrivateRoute path='/posts/:postId' component={Post} />
-          <PrivateRoute path='/addPost' component={AddPost} />
-          <PrivateRoute path='/photography' component={Photography} />
-          <PrivateRoute path='/users/' component={() => {}} /> */}
         </Switch>
       </Router>
-      {/* <NotificationSystem /> */}
     </Fragment>
   );
 };

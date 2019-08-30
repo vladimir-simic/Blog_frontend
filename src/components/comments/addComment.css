@@ -5,6 +5,16 @@
 }
 
 .add_comment_area{
-  width: 35rem;
-  height: 10rem;
+  width: 31rem;
+  height: 12rem;
+}
+
+.addComment-title{
+  position: relative;
+  top: -3rem;
+}
+
+.addComment-author{
+  position: relative;
+  top: 0;
 }

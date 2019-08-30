@@ -6,7 +6,7 @@ import "./post.css";
 
 class Post extends Component {
   componentDidMount() {
-    this.props.getPostList(/*this.props.user, */this.props.match.params.postId);
+    this.props.getPostList(this.props.match.params.postId);
   }
 
   render() {
@@ -25,14 +25,6 @@ class Post extends Component {
           <Comments contentId={postId} />
         </div>
       </div>
-      
-      // <Fragment>
-      
-      //   <h3>Post 1</h3>
-      //   {/* <img src={this.props.post.media.path} alt='' className='w-25' /> */}
-      
-      // <Comments contentId={postId} />
-      // </Fragment>
     );
   }
 }

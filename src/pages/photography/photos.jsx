@@ -10,7 +10,6 @@ import venice from "./photos/venice.jpg";
 
 class Photos extends Component {
     render() {
-        // const { posts } = this.props;
       return (
         <div>
           <h1 className="photography-heading">Digital Art</h1>

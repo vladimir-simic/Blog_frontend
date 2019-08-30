@@ -42,34 +42,34 @@ class Registration extends Component {
             onSubmit={this.onSubmit}
             className='form'
           >
-            <div class="input"> 
+            <div className="input"> 
               <input
                 type='text'
                 name='username'
                 onChange={this.onChange}
               />
-              <span class="highlight"></span>
-              <span class="bar"></span>
+              <span className="highlight"></span>
+              <span className="bar"></span>
               <label htmlFor='' id="username">Username</label>
             </div>
-            <div class="input">
+            <div className="input">
               <input
                 type='email'
                 name='email'
                 onChange={this.onChange}
               />
-              <span class="highlight"></span>
-              <span class="bar"></span>
+              <span className="highlight"></span>
+              <span className="bar"></span>
               <label htmlFor='' id="email">Email</label>
             </div>
-            <div class="input"> 
+            <div className="input"> 
               <input
                 type='password'
                 name='rehashedPassword'
                 onChange={this.onChange}
               />
-              <span class="highlight"></span>
-              <span class="bar"></span>
+              <span className="highlight"></span>
+              <span className="bar"></span>
               <label htmlFor='' id="password">Password</label>
             </div>
             <button type='submit' className='btn'>

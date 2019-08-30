@@ -1,34 +1,22 @@
 import axios from "axios";
 
-const getCommentsByContentId = (contentId) => dispatch => {
+const getCommentsByCommentId = (contentId) => dispatch => {
   axios
-    .get(`/posts/${contentId}/comments/` 
-    // {
-    //   headers: {
-    //     authorization: `Bearer ${token}`
-    //   }
-    // }
-    )
+    .get(`/posts/${contentId}/comments/`)
     .then(response => {
       if (response && response.status === 200) {
         const { payload } = response.data;
         dispatch({
           type: "GET_COMMENTS",
-          payload: payload.comments
+          payload: payload.contentId
         });
       }
     });
 };
 
-const addComment = (contentId, text) => dispatch => {
+const addComment = (contentId, message) => dispatch => {
   axios
-    .post(`/posts/${contentId}/comments/`, text
-    // {
-    //   headers: {
-    //     authorization: `Bearer ${token}`
-    //   }
-    // }
-    )
+    .post(`/comments/posts/${contentId}/comments/`, message)
     .then(response => {
       if (response && response.status === 201) {
         dispatch({
@@ -38,4 +26,4 @@ const addComment = (contentId, text) => dispatch => {
     });
 };
 
-export { getCommentsByContentId, addComment };
+export { getCommentsByCommentId, addComment };

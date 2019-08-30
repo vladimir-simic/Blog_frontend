@@ -3,8 +3,7 @@ import { getSelfInfo } from "./user.actions";
 import User from "./user";
 
 const stateToProps = state => ({
-  user: state.user,
-  // userInfo: state.userInfo
+  user: state.user
 });
 
 export default connect(

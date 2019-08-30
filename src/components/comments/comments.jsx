@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-// import { formatDate } from "../../util/date";
 import AddComment from "./addComment";
 
 class Comments extends Component {
+  state = {
+    title: "",
+    message: "",
+    author: "",
+    author_email: "",
+    post_id: ""
+  };
+
   componentDidMount() {
-    this.props.getCommentsByContentId(
-      // this.props.user, 
-      this.props.contentId);
+    this.props.getCommentsByCommentId(this.props.contentId);
   }
 
   onChange = event => {
@@ -16,27 +21,32 @@ class Comments extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    if (this.state.text.length < 10) {
+    if (this.state.message.length < 10) {
       console.log("Min length 10 char");
       return;
     }
 
-    this.props.addComment(
-      // this.props.user, 
-      this.props.contentId, this.state);
-      console.log(this.props)
+  
+    const {title, message, author, author_email, post_id} = this.state;
+    this.props.addComment({title, message, author, author_email, post_id});
+  
   };
+  
 
   render() {
+    const { comments } = this.props;
     return (
       <div>
         <ul>
-          {this.props.comments.map(item => {
-            const dateObj = new Date(item.created_at);
+          {comments.map((comment, _id) => {
+            const dateObj = new Date(comment.created_at);
             const date = `${dateObj.getDay()}/${dateObj.getMonth()}/${dateObj.getFullYear()} ${dateObj.getHours()}:${dateObj.getMinutes()}`;
             return (
-              <li key={item._id}>
-                {item.author} {date} : {item.message}
+              <li key={_id}> 
+                <h3>
+                  {comment.title} {comment.author} {date} : {comment.message}
+                  
+                </h3>
               </li>
             );
           })}

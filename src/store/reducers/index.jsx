@@ -6,6 +6,7 @@ import getPostList from "./getPostList";
 import comments from "./comments";
 import user from "./user";
 import addPost from "./addPost";
+import addComment from "./addComment";
 
 const rootReducer = combineReducers({
   notifications,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   getPostsList,
   getPostList,
   comments,
+  addComment,
   addPost
 });
 

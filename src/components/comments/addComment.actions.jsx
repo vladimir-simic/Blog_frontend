@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const addPost = ( { title, content, author }) => async dispatch => {
+const addComment = ( { title, message, author, author_email, post_id }) => async dispatch => {
 
   const contentId = await axios
-    .post("/posts")
+    .post(`/comments/`)
     .then(response => {
       if (response && response.status === 200) {
         return response.data.payload.contentId;
@@ -12,22 +12,24 @@ const addPost = ( { title, content, author }) => async dispatch => {
 
   axios
     .post(
-      `/posts`,
+      `/posts/${contentId}/comments/`,
       {
         contentId,
         title,
-        content,
-        author
+        message,
+        author,
+        author_email,
+        post_id
       }
     )
     .then(response => {
       if (response && response.status === 200) {
         dispatch({
-          type: "CREATE_POST_SUCCESS",
+          type: "CREATE_COMMENT_SUCCESS",
           payload: response.data.payload
         });
       }
     });
 };
 
-export { addPost };
+export default addComment;

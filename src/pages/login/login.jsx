@@ -39,24 +39,24 @@ class Login extends Component {
         <Photo />
         <div className="block">
           <form onSubmit={this.onSubmit} className='form'>
-            <div class="input"> 
+            <div className="input"> 
               <input
                 type='email'
                 name='email'
                 onChange={this.onChange}
               />
-              <span class="highlight"></span>
-              <span class="bar"></span>
+              <span className="highlight"></span>
+              <span className="bar"></span>
               <label htmlFor='' id="name">Name</label>
             </div>
-            <div class="input"> 
+            <div className="input"> 
               <input
                 type='password'
                 name='hashedPassword'
                 onChange={this.onChange}
               />
-              <span class="highlight"></span>
-              <span class="bar"></span>
+              <span className="highlight"></span>
+              <span className="bar"></span>
               <label htmlFor=''>Password</label>
             </div>
             <button type='submit' className='btn'>

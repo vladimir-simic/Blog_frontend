@@ -1,3 +1,28 @@
+In my .env file I used these parameters:
+
+API_VERSION = 1
+APP_PORT = 3003
+APP_NAME = server
+
+DB_HOST = localhost
+DB_PORT = 3307
+DB_NAME = blog_db
+DB_PASS = 1234
+DB_USER = root
+
+In my project login and register don't work.
+Creating new posts works fine.
+Creating new comment works partially - on submit it creates
+new comment, adds it into the database but all fields are null
+except the date, a on a page the date/hours are displayed as NaN.
+
+Since the time ran out, I'm not sending you 100% completed project
+but I will definitely keep on working on it at home and finish it
+till the end.
+
+Thank you for giving me a chance to attend on this bootcamp!
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
